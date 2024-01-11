@@ -1,7 +1,7 @@
 :root {
   --color-primary: #7c1118;
   --color-secodary: rgb(7, 7, 66);
-  --color-teritary: #a64429;
+  --color-teritary: #001F3F;
 }
 
 body {
@@ -10,15 +10,15 @@ body {
 }
 
 .headercontainer {
-  background: url(../images/er\ vaggio\ blurry.jpg);
-  background-position: center;
+  background-image: url("images/great_building.jpg");
+  background-position: var(--color-teritary);
   background-size: cover;
 }
 
 /* Navbar and Burger*/
 
 .navbar {
-  background: #a64429;
+  background: var(--color-teritary);
   display: flex;
   position: fixed;
   top: 0;
@@ -41,7 +41,7 @@ nav img {
 }
 
 .nav__list {
-  background: #d67d64;
+  background: var(--color-teritary);
   position: absolute; /*sizing the nav list and the nav column*/
   z-index: 9999; /*prirority of nav column over other images */
   right: 0px;
@@ -125,7 +125,7 @@ a:hover {
 }
 
 .headercontainer {
-  background: url(../images/er\ vaggio\ blurry.jpg);
+  background-image: url("images/great_building.jpg");;
   background-size: cover;
   background-position: center;
 }
@@ -136,7 +136,7 @@ a:hover {
   }
   45% {
     transform: matrix3d(1.2);
-    color: var(--color-primary);
+    color: var(--color-teritary);
   }
 }
 
@@ -306,15 +306,15 @@ a:hover {
 
   .btn1_1stp {
     height: 10rem;
-    width: 120vh;
-    margin: 0 3rem 1rem 3rem;
+    width: 40vw;
+    margin: 3.5rem 3rem 1rem 3rem;
     font-size: 4rem;
   }
 
   .btn2_1stp {
     height: 10rem;
-    width: 120vh;
-    margin: 0 3rem 1rem 3rem;
+    width: 40vw;
+    margin: 3.5rem 3rem 1rem 5rem;
     font-size: 4rem;
   }
 }
@@ -503,13 +503,13 @@ h3 {
   text-transform: uppercase;
   color: #ffff;
   border-radius: 40px;
-  background: tomato;
-  border-color: tomato;
+  background: grey;
+  border-color: grey;
 }
 
 .btn_h4:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  background: var(--color-teritary);
+  border-color: var(--color-teritary);
   cursor: pointer; /* adjust problem with smaller button for bigger screen*/
 }
 

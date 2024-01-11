@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - {{user_profile.user.username}}</title>
+  </head>
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <h1>Profile coming soon</h1>
+      <img
+        style="height: 20rem; width: 20rem"
+        src="{{user_profile.profileimg.url}}"
+        alt=""
+      />
+      <div>{{user_profile.bio}}</div>
+      <span><b>content</b></span>
+      <span><b>product</b></span>
+      <span><b>chat</b></span>
+      <span><b>winks</b></span>
+
+      {% for post in user_post %}
+      <a href="{{post.image.url}}"></a>
+      <img src="{{post.image.url}}" alt="" />
+      {% endfor %}
+
+      <input type="hidden" value="{{user.username}}" name="friends" />
+      <input type="hidden" value="{{user_object.username}}" name="user" />
+      <a href=""><button type="submit">add friend</button></a>
+    </form>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <button>wink</button>
+    </form>
+  </body>
+</html>

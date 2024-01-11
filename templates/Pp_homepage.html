@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <form action="search" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" />
+        <button style="height: 20px; width: 20px" type="submit"></button>
+      </form>
+      <h1>Make Homepage Soon</h1>
+      <img
+        style="height: 200px; width: 200px"
+        src="{{ user_profile.profileimg.url }}"
+        alt=""
+      />
+      <form action="upload" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+          <input type="file" name="image_upload" />
+          <textarea name="caption" placeholder="caption..."></textarea>
+          <br />
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+      <div>
+        {% for post in posts reversed %}
+        <div>
+          <span><a href="/profile/{{post.user}}">@{{ post.user }}</a></span>
+          <div>
+            <img
+              style="height: 500px; width: 500px"
+              src="{{ post.image.url }}"
+              alt="Posted Image"
+            />
+            <a href="{{ post.image.url }}"> </a>
+          </div>
+          <p>
+            <a href="/profile/{{post.user}}"
+              ><strong>{{ post.user }}</strong></a
+            >
+            {{ post.caption }}
+          </p>
+        </div>
+         <form action="{% url 'delete_post' post.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+  </form>
+</div>
+        {% endfor %}
+      </div>
+      <a href="/settings">Account settings</a>
+      <a href="/logout">Log out</a>
+    </header>
+  </body>
+</html>

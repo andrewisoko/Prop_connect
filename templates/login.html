@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      {%for message in messages %}
+      <h5>{{message}}</h5>
+      {% endfor %}
+    </div>
+    <h1>Log In</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <input type="text" name="Username" placeholder="Username" />
+      <input type="password" name="Password" placeholder="Password" />
+      <button>Log in</button>
+      <p>Create an account <a href="/signup">Sign up</a></p>
+    </form>
+  </body>
+</html>
