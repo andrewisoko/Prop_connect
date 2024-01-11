@@ -10,7 +10,7 @@ body {
 }
 
 .headercontainer {
-  background-image: url("images/great_building.jpg");
+  background-image: url("/static/images/great_building.jpg");
   background-position: var(--color-teritary);
   background-size: cover;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 nav img {
-  height: 50px;
+  height: 70px;
   margin-top: 12px;
   margin-left: 10px;
   margin-bottom: 1rem;
@@ -72,8 +72,8 @@ a {
 }
 
 a:hover {
-  color: rgb(98, 17, 17);
-  text-shadow: 1px 1px 1px #3e0505;
+  color: rgb(218, 192, 192);
+  text-shadow: 1px 1px 1px #ffebeb;
 }
 
 .burger div {
@@ -125,7 +125,7 @@ a:hover {
 }
 
 .headercontainer {
-  background-image: url("images/great_building.jpg");;
+  background-image: url("/static/images/great_building.jpg");;
   background-size: cover;
   background-position: center;
 }
@@ -512,6 +512,8 @@ h3 {
   border-color: var(--color-teritary);
   cursor: pointer; /* adjust problem with smaller button for bigger screen*/
 }
+
+
 
 @media screen and (min-width: 800px) {
   .btn_h4 {
